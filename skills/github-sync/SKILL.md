@@ -516,3 +516,104 @@ git reset --soft HEAD~1
 # View commit history
 git log --oneline -10
 ```
+
+## Auto-Sync After Every Commit (Git Hook)
+
+### Setup Auto-Push Hook
+
+To automatically push to GitHub after every commit, set up a `post-commit` hook:
+
+```bash
+# Create the post-commit hook
+cat > .git/hooks/post-commit << 'EOF'
+#!/bin/bash
+# Auto-push after every commit
+echo "Auto-pushing to GitHub..."
+git push
+EOF
+
+# Make it executable
+chmod +x .git/hooks/post-commit
+```
+
+After setting this up, every time you run `git commit`, the changes will automatically be pushed to GitHub.
+
+### PowerShell Hook (Windows)
+
+```powershell
+# Create post-commit hook for Windows
+$hookContent = @'
+#!/bin/bash
+# Auto-push after every commit
+echo "Auto-pushing to GitHub..."
+git push
+'@
+
+$hookPath = ".git/hooks/post-commit"
+Set-Content -Path $hookPath -Value $hookContent -NoNewline
+```
+
+### Disable Auto-Push Hook
+
+If you need to disable auto-push temporarily:
+
+```bash
+# Remove the hook
+rm .git/hooks/post-commit
+
+# Or rename it to disable
+mv .git/hooks/post-commit .git/hooks/post-commit.disabled
+```
+
+### Enhanced Auto-Push Hook with Error Handling
+
+```bash
+cat > .git/hooks/post-commit << 'EOF'
+#!/bin/bash
+# Auto-push with error handling and notifications
+
+echo "🔄 Auto-pushing to GitHub..."
+
+# Attempt to push
+if git push; then
+    echo "✅ Successfully pushed to GitHub"
+else
+    echo "⚠️ Push failed. Trying with upstream..."
+    BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    git push -u origin $BRANCH && echo "✅ Successfully pushed with upstream" || echo "❌ Push failed. Please push manually."
+fi
+EOF
+
+chmod +x .git/hooks/post-commit
+```
+
+### One-Command Setup Script
+
+```bash
+# Run this to set up auto-push for any git repository
+setup_auto_push() {
+    cat > .git/hooks/post-commit << 'HOOK'
+#!/bin/bash
+echo "Auto-pushing to GitHub..."
+git push 2>/dev/null || {
+    BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    git push -u origin "$BRANCH" 2>/dev/null || echo "Push failed. Please check your connection."
+}
+HOOK
+    chmod +x .git/hooks/post-commit
+    echo "✅ Auto-push hook installed! Every commit will now be pushed automatically."
+}
+
+# Run the function
+setup_auto_push
+```
+
+### Verify Hook is Installed
+
+```bash
+# Check if post-commit hook exists
+ls -la .git/hooks/post-commit
+
+# View hook contents
+cat .git/hooks/post-commit
+```
