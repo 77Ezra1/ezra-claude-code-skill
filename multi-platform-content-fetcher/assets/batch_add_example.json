@@ -1,0 +1,75 @@
+{
+  "description": "批量内容添加示例文件",
+  "items": [
+    {
+      "title": "Gaussian Splatting – A$AP Rocky \"Helicopter\" music video",
+      "url": "https://radiancefields.com/",
+      "content": "743 points by ChrisArchitect 1 day ago - Gaussian Splatting 技术制作的 A$AP Rocky 音乐视频",
+      "platform": "hackernews",
+      "author": "ChrisArchitect"
+    },
+    {
+      "title": "American importers and consumers bear the cost of 2025 tariffs: analysis",
+      "url": "https://kielinstitut.de/",
+      "content": "713 points by 47282847 16 hours ago - 关于2025年关税对美国进口商和消费者影响的分析",
+      "platform": "hackernews",
+      "author": "47282847"
+    },
+    {
+      "title": "Dead Internet Theory",
+      "url": "https://kudmitry.com/",
+      "content": "656 points by skwee357 1 day ago - 死亡互联网理论讨论",
+      "platform": "hackernews",
+      "author": "skwee357"
+    },
+    {
+      "title": "Tonkotsu - Manage a team of coding agents from a doc",
+      "url": "https://www.producthunt.com/posts/tonkotsu",
+      "content": "Product Hunt 今日第一 - 从文档管理 AI 编码代理团队的工具",
+      "platform": "producthunt",
+      "author": "Tonkotsu"
+    },
+    {
+      "title": "PayPing - All your recurring payments in one place",
+      "url": "https://www.producthunt.com/posts/payping",
+      "content": "Product Hunt 热门 - 统一管理所有周期性付款的工具",
+      "platform": "producthunt",
+      "author": "PayPing"
+    },
+    {
+      "title": "Usagebar - Track Claude Code Usage from your Menu Bar",
+      "url": "https://www.producthunt.com/posts/usagebar",
+      "content": "Product Hunt 热门 - 从菜单栏跟踪 Claude Code 使用情况",
+      "platform": "producthunt",
+      "author": "Usagebar"
+    },
+    {
+      "title": "美航母战斗群已穿过马六甲海峡",
+      "url": "https://tophub.today/n/KqndgxeLl9",
+      "content": "41万热度 - 微博热搜榜第一名 - 美航母战斗群已穿过马六甲海峡",
+      "platform": "weibo",
+      "author": "微博热搜"
+    },
+    {
+      "title": "联合国警告水破产时代已来临",
+      "url": "https://tophub.today/n/KqndgxeLl9",
+      "content": "4万热度 - 微博热搜榜 - 联合国警告水破产时代已来临",
+      "platform": "weibo",
+      "author": "微博热搜"
+    },
+    {
+      "title": "remotion-dev/remotion - Make videos programmatically with React",
+      "url": "https://github.com/remotion-dev/remotion",
+      "content": "1618 stars today - 用 React 编程方式制作视频的框架",
+      "platform": "github",
+      "author": "remotion-dev"
+    },
+    {
+      "title": "block/goose - Open source AI agent for coding",
+      "url": "https://github.com/block/goose",
+      "content": "492 stars today - 开源 AI 编码代理，可安装、执行、编辑和测试",
+      "platform": "github",
+      "author": "block"
+    }
+  ]
+}
