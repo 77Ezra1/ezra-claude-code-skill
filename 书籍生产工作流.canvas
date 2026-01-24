@@ -1,0 +1,188 @@
+{
+  "nodes": [
+    {
+      "id": "workflow-start",
+      "type": "text",
+      "x": 0,
+      "y": 300,
+      "width": 200,
+      "height": 80,
+      "text": "# 🚀 开始\n\n用户请求：\n\"帮我解读这本书\"\n\n触发工作流",
+      "color": "4"
+    },
+    {
+      "id": "skill-1-group",
+      "type": "group",
+      "x": 280,
+      "y": 0,
+      "width": 500,
+      "height": 250,
+      "label": "Step 1: 下载书籍",
+      "color": "1"
+    },
+    {
+      "id": "skill-1",
+      "type": "text",
+      "x": 320,
+      "y": 50,
+      "width": 420,
+      "height": 150,
+      "text": "# 📚 zlibrary\n\n**功能**：搜索和下载 EPUB 电子书\n\n**触发词**：\n- \"搜索电子书\"\n- \"下载书籍\"\n- \"找本书\"\n\n**输出**：EPUB 文件"
+    },
+    {
+      "id": "skill-2-group",
+      "type": "group",
+      "x": 280,
+      "y": 300,
+      "width": 500,
+      "height": 250,
+      "label": "Step 2: 转换格式",
+      "color": "2"
+    },
+    {
+      "id": "skill-2",
+      "type": "text",
+      "x": 320,
+      "y": 350,
+      "width": 420,
+      "height": 150,
+      "text": "# 📄 epub-to-markdown\n\n**功能**：EPUB 转 Markdown\n\n**触发词**：\n- \"转换 epub\"\n- \"epub 转 markdown\"\n\n**输出**：\n- full_book.md\n- book_metadata.json\n- images/"
+    },
+    {
+      "id": "skill-3-group",
+      "type": "group",
+      "x": 280,
+      "y": 600,
+      "width": 500,
+      "height": 280,
+      "label": "Step 3: 解读写作",
+      "color": "3"
+    },
+    {
+      "id": "skill-3",
+      "type": "text",
+      "x": 320,
+      "y": 650,
+      "width": 420,
+      "height": 180,
+      "text": "# ✍️ book-interpreter\n\n**功能**：Ezra 风格书籍解读\n\n**核心特点**：\n- 对话式语言\n- 术语解释（引用块）\n- 生活化类比\n- 认知升华\n\n**输出**：5000-10000字解读文章"
+    },
+    {
+      "id": "skill-4-group",
+      "type": "group",
+      "x": 280,
+      "y": 920,
+      "width": 500,
+      "height": 280,
+      "label": "Step 4: 配图生成",
+      "color": "5"
+    },
+    {
+      "id": "skill-4",
+      "type": "text",
+      "x": 320,
+      "y": 970,
+      "width": 420,
+      "height": 180,
+      "text": "# 🎨 volcano-images\n\n**功能**：即梦 API 配图生成\n\n**特点**：\n- 《纽约客》风格\n- 并发生成（3线程）\n- 自动插入 Markdown\n\n**输出**：配图完成的文章"
+    },
+    {
+      "id": "workflow-end",
+      "type": "text",
+      "x": 0,
+      "y": 1000,
+      "width": 200,
+      "height": 100,
+      "text": "# ✅ 完成\n\n📄 最终文章\n📊 字数统计\n🖼️ 配图数量\n\n可发布！",
+      "color": "4"
+    },
+    {
+      "id": "data-flow-1",
+      "type": "text",
+      "x": 820,
+      "y": 150,
+      "width": 300,
+      "height": 100,
+      "text": "**数据流**：\n\nbook.epub\n⬇️",
+      "color": "6"
+    },
+    {
+      "id": "data-flow-2",
+      "type": "text",
+      "x": 820,
+      "y": 400,
+      "width": 300,
+      "height": 100,
+      "text": "**数据流**：\n\nfull_book.md\nmetadata.json\n⬇️",
+      "color": "6"
+    },
+    {
+      "id": "data-flow-3",
+      "type": "text",
+      "x": 820,
+      "y": 700,
+      "width": 300,
+      "height": 100,
+      "text": "**数据流**：\n\nbook_解读.md\n⬇️",
+      "color": "6"
+    },
+    {
+      "id": "data-flow-4",
+      "type": "text",
+      "x": 820,
+      "y": 1050,
+      "width": 300,
+      "height": 80,
+      "text": "**数据流**：\n\nbook_解读_配图.md\n✅",
+      "color": "6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-1",
+      "fromNode": "workflow-start",
+      "fromSide": "right",
+      "toNode": "skill-1-group",
+      "toSide": "left",
+      "label": "触发",
+      "color": "1"
+    },
+    {
+      "id": "edge-2",
+      "fromNode": "skill-1-group",
+      "fromSide": "bottom",
+      "toNode": "skill-2-group",
+      "toSide": "top",
+      "label": "EPUB 文件",
+      "color": "2"
+    },
+    {
+      "id": "edge-3",
+      "fromNode": "skill-2-group",
+      "fromSide": "bottom",
+      "toNode": "skill-3-group",
+      "toSide": "top",
+      "label": "Markdown",
+      "color": "3"
+    },
+    {
+      "id": "edge-4",
+      "fromNode": "skill-3-group",
+      "fromSide": "bottom",
+      "toNode": "skill-4-group",
+      "toSide": "top",
+      "label": "解读文章",
+      "color": "5"
+    },
+    {
+      "id": "edge-5",
+      "fromNode": "skill-4-group",
+      "fromSide": "bottom",
+      "toNode": "workflow-end",
+      "toSide": "left",
+      "label": "完成",
+      "toEnd": "arrow",
+      "color": "4"
+    }
+  ]
+}
