@@ -1,0 +1,46 @@
+{
+  "name": "book-content-workflow",
+  "version": "1.0.0",
+  "description": "Obsidian书籍内容生产工作流 - 整合zlibrary、epub-to-markdown、book-interpreter、volcano-images四个技能，实现从搜索书籍到生成解读文章的交互式流程。",
+  "author": "Ezra",
+  "created": "2025-01-25",
+  "dependencies": [
+    "zlibrary",
+    "epub-to-markdown",
+    "book-interpreter",
+    "volcano-images"
+  ],
+  "settings": {
+    "base_path": "~/ObsidianWorkflows",
+    "auto_create_dirs": true,
+    "interactive": true
+  },
+  "workflow": {
+    "stages": [
+      {
+        "id": "search_download",
+        "name": "搜索并下载书籍",
+        "skill": "zlibrary",
+        "ask_user": true
+      },
+      {
+        "id": "convert",
+        "name": "转换为 Markdown",
+        "skill": "epub-to-markdown",
+        "ask_user": true
+      },
+      {
+        "id": "interpret",
+        "name": "生成 Ezra 风格解读",
+        "skill": "book-interpreter",
+        "ask_user": true
+      },
+      {
+        "id": "images",
+        "name": "为文章配图",
+        "skill": "volcano-images",
+        "ask_user": false
+      }
+    ]
+  }
+}
