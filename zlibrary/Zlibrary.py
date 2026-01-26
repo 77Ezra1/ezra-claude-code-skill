@@ -14,13 +14,20 @@ class Zlibrary:
         password: str = None,
         remix_userid: [int, str] = None,
         remix_userkey: str = None,
+        domain: str = None,
+        verify_ssl: bool = True,
+        timeout: int = 30,
+        proxies: dict = None,
     ):
         self.__email: str
         self.__name: str
         self.__kindle_email: str
         self.__remix_userid: [int, str]
         self.__remix_userkey: str
-        self.__domain = "1lib.sk"
+        self.__domain = domain or "1lib.sk"
+        self.__verify_ssl = verify_ssl
+        self.__timeout = timeout
+        self.__proxies = proxies or {}
         self.__loggedin = False
         self.__headers = {
             "Content-Type": "application/x-www-form-urlencoded",
@@ -92,6 +99,9 @@ class Zlibrary:
             data=data,
             cookies=self.__cookies,
             headers=self.__headers,
+            verify=self.__verify_ssl,
+            timeout=self.__timeout,
+            proxies=self.__proxies,
         ).json()
 
     def __makeGetRequest(
@@ -105,6 +115,9 @@ class Zlibrary:
             params=params,
             cookies=self.__cookies if cookies is None else cookies,
             headers=self.__headers,
+            verify=self.__verify_ssl,
+            timeout=self.__timeout,
+            proxies=self.__proxies,
         ).json()
 
     def getProfile(self) -> dict[str, str]:

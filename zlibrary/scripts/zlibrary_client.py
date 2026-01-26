@@ -12,7 +12,7 @@ from pathlib import Path
 class ZlibraryClient:
     """Zlibrary API 客户端封装"""
 
-    def __init__(self, email=None, password=None, remix_userid=None, remix_userkey=None):
+    def __init__(self, email=None, password=None, remix_userid=None, remix_userkey=None, domain=None, verify_ssl=True, proxies=None):
         """
         初始化客户端
 
@@ -21,6 +21,9 @@ class ZlibraryClient:
             password: 密码（可选）
             remix_userid: Remix 用户 ID（推荐）
             remix_userkey: Remix 用户密钥（推荐）
+            domain: Z-library 域名（可选，默认 1lib.sk）
+            verify_ssl: 是否验证 SSL 证书（默认 True）
+            proxies: 代理设置字典，如 {"http": "http://127.0.0.1:7897", "https": "http://127.0.0.1:7897"}
         """
         # 尝试从配置文件加载凭证
         config_path = Path(__file__).parent.parent / "config" / "credentials.json"
@@ -36,6 +39,16 @@ class ZlibraryClient:
                     email = config.get("email")
                 if not password and config.get("password"):
                     password = config.get("password")
+                if not domain and config.get("domain"):
+                    domain = config.get("domain")
+                if config.get("verify_ssl") is not None:
+                    verify_ssl = config.get("verify_ssl")
+                if not proxies and config.get("proxies"):
+                    proxies = config.get("proxies")
+
+        self._verify_ssl = verify_ssl
+        self._timeout = 30  # 默认超时 30 秒
+        self._proxies = proxies
 
         # 将技能根目录添加到 Python 路径
         skill_root = Path(__file__).parent.parent
@@ -48,7 +61,11 @@ class ZlibraryClient:
                 email=email,
                 password=password,
                 remix_userid=remix_userid,
-                remix_userkey=remix_userkey
+                remix_userkey=remix_userkey,
+                domain=domain,
+                verify_ssl=verify_ssl,
+                timeout=self._timeout,
+                proxies=proxies
             )
         except Exception as e:
             print(f"初始化失败: {e}")

@@ -4,13 +4,11 @@ description: Zlibrary 电子书搜索与下载 - 封装 Zlibrary API，支持搜
 version: 1.0.0
 triggers:
   keywords:
-    # 核心关键词
     - "zlibrary"
     - "电子书"
     - "图书"
     - "书籍"
     - "小说"
-    # 搜索相关
     - "搜书"
     - "搜索书"
     - "找书"
@@ -18,18 +16,15 @@ triggers:
     - "搜一本"
     - "搜索一本"
     - "查书"
-    # 下载相关
     - "下载电子书"
     - "下载图书"
     - "下载书"
     - "下载小说"
-    # 其他
     - "z-lib"
     - "zlib"
     - "kindle"
     - "图书馆"
   patterns:
-    # 高优先级模式
     - "搜索*书"
     - "找*书"
     - "*电子书"
