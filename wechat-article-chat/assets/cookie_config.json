@@ -1,0 +1,24 @@
+{
+  "cookies": [
+    {
+      "name": "cookie名称1",
+      "value": "cookie值1",
+      "domain": "mp.weixin.qq.com"
+    },
+    {
+      "name": "cookie名称2",
+      "value": "cookie值2",
+      "domain": "mp.weixin.qq.com"
+    }
+  ],
+  "last_updated": "请按照以下步骤获取Cookie后更新此时间",
+  "instructions": [
+    "1. 在浏览器中访问 https://mp.weixin.qq.com/ 并登录",
+    "2. 按F12打开开发者工具",
+    "3. 切换到 Application (应用) 标签",
+    "4. 左侧找到 Storage → Cookies → https://mp.weixin.qq.com",
+    "5. 复制所有相关的Cookie（特别是 key, pass_ticket, wxuin 等）",
+    "6. 按照上面的格式粘贴到 cookies 数组中",
+    "7. 更新 last_updated 为当前时间"
+  ]
+}
