@@ -1,7 +1,9 @@
 ---
 name: video-downloader
 description: Video and audio downloading tool using yt-dlp and ffmpeg. Use when user asks to: download videos/audio from websites (YouTube, Bilibili, Twitter, Instagram, etc.), convert video formats, extract audio, download subtitles, process playlists, record streams, or any video/audio downloading and processing tasks. Supports 1000+ websites via yt-dlp.
+user-invocable: false
 ---
+
 
 # Video Downloader
 

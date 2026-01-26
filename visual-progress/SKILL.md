@@ -5,6 +5,7 @@ user-invocable: true
 ---
 
 
+
 # Visual Progress
 
 Visual Progress is a terminal-based progress framework for Claude Code Skills that provides beautiful, themeable progress displays for long-running operations.

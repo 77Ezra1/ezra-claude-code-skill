@@ -1,12 +1,9 @@
 ---
 name: commit
-description: '创建格式良好的 Git 提交 - 使用 Conventional Commit 规范生成提交信息。
-
-
-  使用场景：当用户提到 「提交代码」、「提交更改」、「提交一下」、「帮我提交」、「写提交信息」、「生成提交信息」、「保存更改」、「保存代码」、「记录更改」、「做个提交」
-  等关键词时触发此技能。'
+description: 创建格式良好的 Git 提交 - 使用 Conventional Commit 规范生成提交信息。
 user-invocable: true
 ---
+
 
 # Commit: Git 提交助手
 

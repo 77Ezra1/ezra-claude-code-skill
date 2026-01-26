@@ -1,7 +1,9 @@
 ---
 name: book-content-workflow
-description: "Obsidian书籍内容生产工作流 - 整合zlibrary、epub-to-markdown、book-interpreter、volcano-images四个技能，实现从搜索书籍到生成解读文章的完整流程。每步完成后使用 AskUserQuestion 询问用户是否继续。当用户说「帮我解读《书名》」、「完成《书名》的完整解读流程」、「生成《书名》的读书笔记」或「书籍解读工作流」时使用此技能。"
+description: Obsidian书籍内容生产工作流 - 整合zlibrary、epub-to-markdown、book-interpreter、volcano-images四个技能，实现从搜索书籍到生成解读文章的完整流程。每步完成后使用 AskUserQuestion 询问用户是否继续。当用户说「帮我解读《书名》」、「完成《书名》的完整解读流程」、「生成《书名》的读书笔记」或「书籍解读工作流」时使用此技能。
+user-invocable: false
 ---
+
 
 # 书籍内容生产工作流
 

@@ -1,7 +1,9 @@
 ---
 name: frontend-test
 description: Comprehensive frontend testing suite for UI, functionality, performance, and code quality. Use when user asks to test frontend code, check for bugs, validate UI/UX, run frontend tests, perform quality assurance, or audit frontend projects. Supports React, Vue, vanilla JS, and other frameworks. Covers visual testing, interaction testing, performance analysis, accessibility checks, and code quality review.
+user-invocable: false
 ---
+
 
 # Frontend Test Suite
 

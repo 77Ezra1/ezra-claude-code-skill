@@ -1,12 +1,9 @@
 ---
 name: github-upload
-description: '上传项目到 GitHub - 自动创建仓库、处理提交和冲突。提交后自动更新说明文档。
-
-
-  使用场景：当用户提到 「上传到 GitHub」、「推送到 GitHub」、「提交到 GitHub」、「同步到远程」、「推送代码」、「创建仓库」、「创建 GitHub
-  仓库」、「传到远程」、「发布到 GitHub」、「同步代码」 等关键词时触发此技能。'
+description: 上传项目到 GitHub - 自动创建仓库、处理提交和冲突。提交后自动更新说明文档。
 user-invocable: true
 ---
+
 
 # GitHub Upload: 项目上传到 GitHub
 

@@ -1,7 +1,9 @@
 ---
 name: book-interpreter
 description: Ezra style book interpreter - Transform books into conversational Chinese articles following Ezra's writing style. Use when user mentions "read book", "interpret book", "book summary", "Ezra style", or after converting epub to markdown. Features conversational language, term explanations with quotes, life analogies, and cognitive extensions.
+user-invocable: false
 ---
+
 
 # 书籍解读 (Ezra 风格)
 
