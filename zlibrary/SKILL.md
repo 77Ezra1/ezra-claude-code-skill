@@ -1,50 +1,11 @@
 ---
 name: zlibrary
-description: Zlibrary 电子书搜索与下载 - 封装 Zlibrary API，支持搜索图书、获取详情、下载图书、收藏管理等功能。
-version: 1.0.0
-triggers:
-  keywords:
-    - "zlibrary"
-    - "电子书"
-    - "图书"
-    - "书籍"
-    - "小说"
-    - "搜书"
-    - "搜索书"
-    - "找书"
-    - "找本书"
-    - "搜一本"
-    - "搜索一本"
-    - "查书"
-    - "下载电子书"
-    - "下载图书"
-    - "下载书"
-    - "下载小说"
-    - "z-lib"
-    - "zlib"
-    - "kindle"
-    - "图书馆"
-  patterns:
-    - "搜索*书"
-    - "找*书"
-    - "*电子书"
-    - "下载*书"
-    - "zlibrary*"
-    - "*kindle"
-    - "有没有*书"
-    - "推荐*书"
-    - "我要*书"
-    - "想要*书"
-    - "有没有*电子书"
-    - "找本*"
-    - "搜本*"
-  intents:
-    - book-search
-    - book-download
-    - library-query
-    - ebook-search
-priority: 90
-conflicts: []
+description: 'Zlibrary 电子书搜索与下载 - 封装 Zlibrary API，支持搜索图书、获取详情、下载图书、收藏管理等功能。
+
+使用场景：当用户说「搜索 Python 相关的书籍」「找机器学习电子书」「下载这本书」「获取图书详情」「查看热门图书」「最近添加的书籍」「zlibrary 搜索」「电子书」「图书」「书籍」「小说」「搜书」「搜索书」「找书」「找本书」「搜一本」「搜索一本」「查书」「下载电子书」「下载图书」「下载书」「下载小说」「z-lib」「zlib」「kindle」「图书馆」等关键词时触发此技能。
+
+用户可以直接用 /zlibrary 命令调用，或者通过自然语言描述需求。'
+user-invocable: true
 ---
 
 # Zlibrary: 电子书搜索与下载
