@@ -1,44 +1,11 @@
 ---
 name: github-upload
-description: 上传项目到 GitHub - 自动创建仓库、处理提交和冲突。提交后自动更新说明文档。
-version: 1.1.0
-triggers:
-  keywords:
-    # 中文表达
-    - "上传到 GitHub"
-    - "推送到 GitHub"
-    - "提交到 GitHub"
-    - "同步到远程"
-    - "推送代码"
-    - "创建仓库"
-    - "创建 GitHub 仓库"
-    - "传到远程"
-    - "发布到 GitHub"
-    - "同步代码"
-    # 英文/混合表达
-    - "push"
-    - "git push"
-    - "push to github"
-    - "upload to github"
-    # 口语化表达
-    - "传上去"
-    - "推上去"
-    - "发到 GitHub"
-    - "放到 GitHub"
-  patterns:
-    - "*到 GitHub"
-    - "推送*"
-    - "上传*到*"
-    - "同步*远程*"
-    - "*传到*"
-    - "push*"
-  intents:
-    - code-upload
-    - git-push
-    - repo-create
-priority: 80
-conflicts:
-  - commit
+description: '上传项目到 GitHub - 自动创建仓库、处理提交和冲突。提交后自动更新说明文档。
+
+
+  使用场景：当用户提到 「上传到 GitHub」、「推送到 GitHub」、「提交到 GitHub」、「同步到远程」、「推送代码」、「创建仓库」、「创建 GitHub
+  仓库」、「传到远程」、「发布到 GitHub」、「同步代码」 等关键词时触发此技能。'
+user-invocable: true
 ---
 
 # GitHub Upload: 项目上传到 GitHub

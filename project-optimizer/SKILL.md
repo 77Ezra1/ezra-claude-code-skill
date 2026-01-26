@@ -1,37 +1,9 @@
 ---
 name: project-optimizer
-description: Project optimization specialist that generates comprehensive optimization documents based on frontend-test results or any issue findings. Use this skill when user requests creating optimization plans, generating reports, prioritizing bug fixes, or organizing improvement strategies.
-
-**Natural Language Triggers** (invoke this skill when you see these patterns):
-- "帮我整理/分析/总结这些问题"
-- "这些bug/问题怎么修/怎么处理"
-- "生成优化计划/报告/方案"
-- "帮我制定修复计划/roadmap"
-- "根据测试结果生成文档"
-- "这些问题优先级怎么排"
-- "帮我生成优化建议"
-- "创建修复清单"
-- "问题太多怎么办"
-- "帮我规划一下优化路线"
-- "检测出这么多问题，怎么处理"
-- "我想优化一下项目"
-- "给个修复计划"
-- "这些问题怎么安排"
-- "生成问题分析报告"
-- "帮我组织一下这些优化任务"
-- "根据检测结果生成优化文档"
-- "这些问题按什么顺序修"
-- "需要改的地方太多了，帮我想想"
-- "系统检测到问题怎么办"
-- "评估一下项目状况"
-
-**Applicable Contexts:**
-- After frontend-test skill execution
-- When user shares bug reports or test findings
-- When user asks for project health assessment
-- When user wants actionable improvement plans
-- When user asks how to prioritize fixes
+description: Project optimization specialist that generates comprehensive optimization documents based on frontend-test results or any issue findings. Use this skill when user requests creating optimization plans, generating reports, prioritizing bug fixes, or organizing improvement strategies. 当用户提到「帮我整理/分析/总结这些问题、这些bug/问题怎么修/怎么处理、生成优化计划/报告/方案、帮我制定修复计划/roadmap、根据测试结果生成文档、这些问题优先级怎么排、帮我生成优化建议、创建修复清单、问题太多怎么办、帮我规划一下优化路线、检测出这么多问题，怎么处理、我想优化一下项目、给个修复计划、这些问题怎么安排、生成问题分析报告」等关键词时触发。
+user-invocable: true
 ---
+
 
 # Project Optimizer
 

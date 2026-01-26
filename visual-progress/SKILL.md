@@ -1,41 +1,9 @@
 ---
 name: visual-progress
-description: Visual progress framework for Claude Code Skills. Provides beautiful terminal-based progress bars, task lists, batch processing, and file processing with multiple themes (colorful, minimal, dark, forest, ocean). Use when user requests: (1) Progress display, (2) Visual workflow tracking, (3) Batch processing with progress, (4) File processing with progress, (5) Terminal UI for long-running tasks
-
-# Natural Language Triggers
-
-Use this skill when user says things like:
-
-## Progress Display Triggers
-- "显示进度" / "进度显示" / "可视化进度"
-- "进度条" / "显示进度条" / "进度条显示"
-- "任务进度" / "显示任务进度" / "进度跟踪"
-- "show progress" / "display progress" / "progress bar"
-
-## Workflow/Task Tracking Triggers
-- "工作流" / "任务工作流" / "工作流跟踪"
-- "任务列表" / "任务列表显示" / "可视化任务"
-- "执行进度" / "执行跟踪" / "任务执行"
-- "workflow progress" / "task tracking" / "visual workflow"
-
-## Batch Processing Triggers
-- "批处理" / "批量处理" / "批处理进度"
-- "批量任务" / "批量操作" / "批量执行"
-- "批处理显示" / "批量进度"
-- "batch processing" / "batch tasks" / "bulk processing"
-
-## File Processing Triggers
-- "文件处理" / "文件处理进度" / "批量文件"
-- "遍历文件" / "文件扫描" / "文件统计"
-- "file processing" / "file batch" / "scan files"
-
-## Terminal UI Triggers
-- "终端UI" / "命令行界面" / "TUI"
-- "美化输出" / "美化显示" / "美化进度"
-- "彩色进度" / "主题进度"
-- "terminal UI" / "beautify output" / "themed progress"
-
+description: Visual progress framework for Claude Code Skills. Provides beautiful terminal-based progress bars, task lists, batch processing, and file processing with multiple themes (colorful, minimal, dark, forest, ocean). Use when user requests: (1) Progress display, (2) Visual workflow tracking, (3) Batch processing with progress, (4) File processing with progress, (5) Terminal UI for long-running tasks 当用户提到「显示进度" / "进度显示" / "可视化进度、进度条" / "显示进度条" / "进度条显示、任务进度" / "显示任务进度" / "进度跟踪、show progress" / "display progress" / "progress bar、工作流" / "任务工作流" / "工作流跟踪、任务列表" / "任务列表显示" / "可视化任务、执行进度" / "执行跟踪" / "任务执行、workflow progress" / "task tracking" / "visual workflow、批处理" / "批量处理" / "批处理进度、批量任务" / "批量操作" / "批量执行、批处理显示" / "批量进度、batch processing" / "batch tasks" / "bulk processing、文件处理" / "文件处理进度" / "批量文件、遍历文件" / "文件扫描" / "文件统计、file processing" / "file batch" / "scan files」等关键词时触发。
+user-invocable: true
 ---
+
 
 # Visual Progress
 

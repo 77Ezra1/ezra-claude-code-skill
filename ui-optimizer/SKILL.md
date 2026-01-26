@@ -1,50 +1,9 @@
 ---
 name: ui-optimizer
-description: Frontend UI optimization specialist for DocPilot project. Uses the project's design system: Notion-style + black/white/gray + iOS capsule rounded corners. NO emojis. Uses SVG icons for products/services. Use when user requests: (1) UI optimization, (2) Component creation, (3) Style improvements, (4) Integration UI design, (5) Responsive design fixes
-
-# Natural Language Triggers
-
-Use this skill when user says things like:
-
-## UI Optimization Triggers
-- "优化前端UI" / "优化界面" / "美化界面"
-- "改进UI" / "UI优化" / "界面优化"
-- "优化样式" / "修改样式" / "调整样式"
-- "这个页面需要优化" / "页面美化"
-- "UI优化建议" / "界面改进建议"
-- "optimize UI" / "improve interface"
-- "UI设计优化" / "界面设计"
-
-## Component Creation Triggers
-- "创建组件" / "新建组件" / "设计组件"
-- "做个xxx组件" / "实现xxxUI"
-- "帮我设计xxx" / "实现xxx界面"
-- "创建xxx页面" / "做xxx页面"
-- "create component" / "design UI"
-- "新建页面" / "页面开发"
-
-## Integration UI Triggers
-- "集成notion" / "集成github" / "集成slack"
-- "notion集成界面" / "github连接页面"
-- "设计xxx集成" / "xxx集成页面"
-- "集成xxx" / "连接xxx服务"
-- "integration UI for xxx"
-- "design integration page"
-- "OAuth连接页面" / "授权页面"
-
-## Style/Design Triggers
-- "调整按钮样式" / "修改卡片样式"
-- "改一下颜色" / "调整圆角"
-- "响应式设计" / "移动端适配"
-- "暗色模式" / "dark mode"
-- "样式问题" / "显示问题"
-
-## General Triggers
-- "前端界面" / "UI设计"
-- "帮我设计" / "实现界面"
-- "这个怎么样改好看"
-- "前端优化" / "界面美化"
+description: Frontend UI optimization specialist for DocPilot project. Uses the project's design system: Notion-style + black/white/gray + iOS capsule rounded corners. NO emojis. Uses SVG icons for products/services. Use when user requests: (1) UI optimization, (2) Component creation, (3) Style improvements, (4) Integration UI design, (5) Responsive design fixes 当用户提到「优化前端UI" / "优化界面" / "美化界面、改进UI" / "UI优化" / "界面优化、优化样式" / "修改样式" / "调整样式、这个页面需要优化" / "页面美化、UI优化建议" / "界面改进建议、optimize UI" / "improve interface、UI设计优化" / "界面设计、创建组件" / "新建组件" / "设计组件、做个xxx组件" / "实现xxxUI、帮我设计xxx" / "实现xxx界面、创建xxx页面" / "做xxx页面、create component" / "design UI、新建页面" / "页面开发、集成notion" / "集成github" / "集成slack、notion集成界面" / "github连接页面」等关键词时触发。
+user-invocable: true
 ---
+
 
 # UI Optimizer
 

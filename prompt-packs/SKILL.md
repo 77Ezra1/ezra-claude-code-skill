@@ -1,33 +1,11 @@
 ---
 name: prompt-packs
-description: OpenAI Academy 提示词库 - 200+ 企业场景提示词，支持销售、产品、工程、HR等10个团队
-version: 1.1.0
-triggers:
-  keywords:
-    # 中文表达
-    - "提示词"
-    - "prompt"
-    - "提示库"
-    - "提示词库"
-    - "用提示词"
-    - "prompt packs"
-    - "openai prompt"
-    # 英文表达
-    - "use prompt"
-    - "prompt template"
-    - "prompt library"
-  patterns:
-    - "/prompt-packs*"
-    - "/pp*"
-    - "用提示词*"
-    - "*提示词模板"
-    - "prompt*"
-  intents:
-    - prompt-template
-    - prompt-library
-    - use-prompt
-    - prompt-packs
-priority: 85
+description: 'OpenAI Academy 提示词库 - 200+ 企业场景提示词，支持销售、产品、工程、HR等10个团队
+
+
+  使用场景：当用户提到 「提示词」、「prompt」、「提示库」、「提示词库」、「用提示词」、「prompt packs」、「openai prompt」、「use
+  prompt」、「prompt template」、「prompt library」 等关键词时触发此技能。'
+user-invocable: true
 ---
 
 # Prompt Packs: OpenAI Academy 提示词库

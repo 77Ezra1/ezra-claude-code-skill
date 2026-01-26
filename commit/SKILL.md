@@ -1,52 +1,11 @@
 ---
 name: commit
-description: 创建格式良好的 Git 提交 - 使用 Conventional Commit 规范生成提交信息。
-version: 1.0.0
-triggers:
-  keywords:
-    # 中文表达
-    - "提交代码"
-    - "提交更改"
-    - "提交一下"
-    - "帮我提交"
-    - "写提交信息"
-    - "生成提交信息"
-    - "保存更改"
-    - "保存代码"
-    - "记录更改"
-    - "做个提交"
-    - "创建提交"
-    # 英文/混合表达
-    - "commit"
-    - "git commit"
-    - "make a commit"
-    - "create commit"
-    # 口语化表达
-    - "存一下"
-    - "存个档"
-    - "改完了"
-    - "写完了"
-    - "做完了"
-    - "弄完了"
-    - "搞定了"
-  patterns:
-    - "提交*"
-    - "commit*"
-    - "*提交信息"
-    - "帮我*commit"
-    - "*做个提交"
-    - "*存一下"
-    - "*改好了"
-    - "*写好了"
-    - "把*提交"
-  intents:
-    - git-commit
-    - code-commit
-    - version-control
-    - save-changes
-priority: 90
-conflicts:
-  - github-upload
+description: '创建格式良好的 Git 提交 - 使用 Conventional Commit 规范生成提交信息。
+
+
+  使用场景：当用户提到 「提交代码」、「提交更改」、「提交一下」、「帮我提交」、「写提交信息」、「生成提交信息」、「保存更改」、「保存代码」、「记录更改」、「做个提交」
+  等关键词时触发此技能。'
+user-invocable: true
 ---
 
 # Commit: Git 提交助手
