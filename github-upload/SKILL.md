@@ -1,7 +1,7 @@
 ---
 name: github-upload
-description: 上传项目到 GitHub - 自动创建仓库、处理提交和冲突
-version: 1.0.0
+description: 上传项目到 GitHub - 自动创建仓库、处理提交和冲突。提交后自动更新说明文档。
+version: 1.1.0
 triggers:
   keywords:
     # 中文表达
@@ -353,6 +353,137 @@ fi
 2. **发现冲突必须询问用户**，不能自动覆盖
 3. **检查敏感文件**，防止泄露密钥
 4. **使用 --force-with-lease** 而非 --force，更安全
+
+---
+
+## 提交后自动更新说明文档
+
+当仓库包含说明文档（如 README.md、SKILLS-INDEX.md）且项目结构发生变化时，提交后应自动更新这些文档。
+
+### 检测项目类型
+
+在提交后，检查项目是否为以下类型：
+
+**1. Claude Code Skills 仓库**
+
+检测特征：
+- 存在 `SKILLS-INDEX.md` 文件
+- 存在多个 `*/SKILL.md` 文件
+
+**2. 普通项目仓库**
+
+检测特征：
+- 存在 `README.md` 文件
+- 可能存在其他文档文件
+
+### Skills 仓库文档更新流程
+
+**步骤 1: 扫描 skill 目录**
+
+```bash
+# 查找所有 skill 目录
+find . -name "SKILL.md" -type f | grep -v ".git" | sort
+```
+
+**步骤 2: 提取 skill 信息**
+
+从每个 `SKILL.md` 提取：
+- `name`: skill 名称
+- `description`: 描述
+- `priority`: 优先级（如果有）
+- `triggers`: 触发词（如果有）
+
+**步骤 3: 更新 SKILLS-INDEX.md**
+
+根据扫描结果，生成/更新：
+- 按分类组织的触发词表
+- 优先级规则
+- 意图分类
+
+**步骤 4: 更新 README.md**
+
+更新内容：
+- Skills 总数统计
+- 按分类的 skills 列表
+- 典型工作流示例
+
+**步骤 5: 提交文档更新**
+
+```bash
+# 如果文档有变化，自动提交
+git add SKILLS-INDEX.md README.md
+git commit -m "docs: auto-update skills documentation"
+git push origin main
+```
+
+### 普通项目文档更新流程
+
+**步骤 1: 分析项目结构**
+
+```bash
+# 检查项目类型
+if [ -f "package.json" ]; then
+    # Node.js 项目
+    echo "Node.js 项目"
+elif [ -f "requirements.txt" ] || [ -f "pyproject.toml" ]; then
+    # Python 项目
+    echo "Python 项目"
+elif [ -f "go.mod" ]; then
+    # Go 项目
+    echo "Go 项目"
+fi
+```
+
+**步骤 2: 更新 README.md**
+
+根据项目变化更新：
+- 安装/使用说明
+- 功能列表
+- 项目结构图
+- 依赖项列表
+
+**步骤 3: 检查文档完整性**
+
+确保以下内容是最新的：
+- 项目描述
+- 安装步骤
+- 配置说明
+- 使用示例
+- API 文档（如果有）
+
+### 自动更新触发条件
+
+当满足以下条件时，自动触发文档更新：
+
+| 条件 | 说明 |
+|------|------|
+| 新增 skill | 检测到新的 `*/SKILL.md` 文件 |
+| 删除 skill | 之前存在的 skill 目录消失 |
+| 修改 skill | `SKILL.md` 内容有变化 |
+| 新增文件 | 项目根目录新增了文件 |
+| 结构变化 | 目录结构发生变化 |
+
+### 实现示例
+
+```bash
+# 伪代码：文档自动更新逻辑
+if project_is_skills_repo; then
+    scan_skills()
+    update_skills_index()
+    update_readme()
+
+    if git diff --quiet; then
+        echo "文档已是最新，无需更新"
+    else
+        git add SKILLS-INDEX.md README.md
+        git commit -m "docs: auto-update skills documentation"
+        git push origin main
+        echo "✓ 文档已自动更新"
+    fi
+fi
+```
+
+---
 
 ## 快捷命令
 

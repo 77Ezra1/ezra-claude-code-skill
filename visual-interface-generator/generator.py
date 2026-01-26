@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Visual Interface Generator
 自动为 Skill 生成可视化进度界面
@@ -9,6 +10,15 @@ import os
 import re
 from pathlib import Path
 from typing import Dict, List, Any, Optional
+
+# 修复 Windows 控制台编码问题
+if sys.platform == "win32":
+    try:
+        import codecs
+        sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
+        sys.stderr = codecs.getwriter("utf-8")(sys.stderr.detach())
+    except:
+        pass
 
 
 class SkillAnalyzer:
@@ -26,13 +36,13 @@ class SkillAnalyzer:
         skill_md_path = self.skill_path / "SKILL.md"
 
         if not skill_md_path.exists():
-            print(f"❌ 未找到 SKILL.md: {skill_md_path}")
+            print(f"[Error] 未找到 SKILL.md: {skill_md_path}")
             return False
 
         with open(skill_md_path, 'r', encoding='utf-8') as f:
             self.skill_markdown = f.read()
 
-        print(f"✅ 已读取: {skill_md_path}")
+        print(f"[OK] 已读取: {skill_md_path}")
         return True
 
     def extract_skill_info(self) -> Dict[str, Any]:
@@ -94,17 +104,17 @@ class SkillAnalyzer:
             for i, header in enumerate(section_headers[:10]):
                 steps.append({
                     'id': f'section{i+1}',
-                    'name': f"📋 {header}",
+                    'name': f"[List] {header}",
                     'type': 'section'
                 })
 
         # 模式 3: 工作流程关键词
         workflow_patterns = [
-            (r'第一(?:步|阶段)[:：]\s*(.+)', '📝'),
-            (r'第二(?:步|阶段)[:：]\s*(.+)', '🔄'),
-            (r'第三(?:步|阶段)[:：]\s*(.+)', '📊'),
-            (r'然后[:：]\s*(.+)', '➡️'),
-            (r'最后[:：]\s*(.+)', '✅'),
+            (r'第一(?:步|阶段)[:：]\s*(.+)', '[Doc]'),
+            (r'第二(?:步|阶段)[:：]\s*(.+)', '[Convert]'),
+            (r'第三(?:步|阶段)[:：]\s*(.+)', '[Info]'),
+            (r'然后[:：]\s*(.+)', '[Next]'),
+            (r'最后[:：]\s*(.+)', '[OK]'),
         ]
         for pattern, icon in workflow_patterns:
             matches = re.findall(pattern, self.skill_markdown)
@@ -271,7 +281,7 @@ if __name__ == '__main__':
 
     results = {self._to_snake_case(skill_name)}(input_data)
 
-    print("\\n✅ 处理完成!")
+    print("\\n[OK] 处理完成!")
     print(f"结果: {{results}}")
 '''
 
@@ -298,22 +308,22 @@ def generate_visual_interface(skill_path: str, output_path: str = None) -> str:
     """
 
     print(f"\\n{'='*60}")
-    print(f"🎨 为 Skill 生成可视化界面")
+    print(f"[Gen] 为 Skill 生成可视化界面")
     print(f"{'='*60}")
 
     # 1. 分析 Skill
-    print(f"\\n📂 分析 Skill: {skill_path}")
+    print(f"\\n[Folder] 分析 Skill: {skill_path}")
     analyzer = SkillAnalyzer(skill_path)
 
     if not analyzer.read_skill_markdown():
         return None
 
-    print(f"📖 提取基本信息...")
+    print(f"[Book] 提取基本信息...")
     info = analyzer.extract_skill_info()
     print(f"   名称: {info.get('name', 'Unknown')}")
     print(f"   描述: {info.get('description', 'No description')[:80]}...")
 
-    print(f"\\n🔍 分析工作流程...")
+    print(f"\\n[Search] 分析工作流程...")
     workflow = analyzer.analyze_workflow()
     print(f"   识别到 {len(workflow)} 个步骤:")
 
@@ -321,13 +331,13 @@ def generate_visual_interface(skill_path: str, output_path: str = None) -> str:
         print(f"   {i}. {step['name']}")
 
     processing_type = analyzer.detect_processing_type()
-    print(f"\\n📊 处理类型: {processing_type}")
+    print(f"\\n[Info] 处理类型: {processing_type}")
 
     theme = analyzer.suggest_theme()
     print(f"   建议主题: {theme}")
 
     # 2. 生成代码
-    print(f"\\n✨ 生成可视化代码...")
+    print(f"\\n[Magic] 生成可视化代码...")
     generator = CodeGenerator(analyzer)
     code = generator.generate_progress_code()
 
@@ -339,17 +349,17 @@ def generate_visual_interface(skill_path: str, output_path: str = None) -> str:
         with open(output_file, 'w', encoding='utf-8') as f:
             f.write(code)
 
-        print(f"\\n✅ 代码已保存到: {output_path}")
+        print(f"\\n[OK] 代码已保存到: {output_path}")
     else:
         print(f"\\n{'='*60}")
-        print(f"📝 生成的代码:")
+        print(f"[Doc] 生成的代码:")
         print(f"{'='*60}\\n")
         print(code)
 
     # 4. 生成总结
     summary = analyzer.generate_summary()
     print(f"\\n{'='*60}")
-    print(f"📋 分析总结")
+    print(f"[List] 分析总结")
     print(f"{'='*60}")
     print(f"Skill 名称: {summary['skill_name']}")
     print(f"工作流类型: {summary['workflow_type']}")
@@ -387,10 +397,10 @@ def main():
     code = generate_visual_interface(args.skill_path, args.output)
 
     if code:
-        print(f"\\n🎉 成功! 现在可以使用生成的带进度显示的代码了")
+        print(f"\\n[Success] 成功! 现在可以使用生成的带进度显示的代码了")
         return 0
     else:
-        print(f"\\n❌ 失败! 请检查 Skill 路径是否正确")
+        print(f"\\n[Error] 失败! 请检查 Skill 路径是否正确")
         return 1
 
 

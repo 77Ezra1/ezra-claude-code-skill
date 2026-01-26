@@ -127,6 +127,81 @@
 | prompt packs | 「使用 prompt packs」 |
 | openai prompt | 「OpenAI 官方提示词」 |
 
+### 可视化进度类 → `/visual-progress`
+| 触发词 | 示例 |
+|--------|------|
+| 显示进度 | 「显示处理进度」 |
+| 进度条 | 「显示进度条」 |
+| 工作流跟踪 | 「跟踪工作流进度」 |
+| 批处理进度 | 「批处理显示进度」 |
+| 任务进度 | 「任务进度显示」 |
+
+### 算法艺术类 → `/algorithmic-art`
+| 触发词 | 示例 |
+|--------|------|
+| 算法艺术 | 「创建算法艺术」 |
+| 生成艺术 | 「生成艺术作品」 |
+| 算法绘画 | 「用代码画画」 |
+| flow field | 「创建 flow field」 |
+| 粒子系统 | 「粒子系统艺术」 |
+
+### 文档处理类 → `/docx` `/pdf` `/xlsx` `/pptx`
+| 触发词 | 示例 |
+|--------|------|
+| 处理 Word | 「编辑 Word 文档」 |
+| 处理 PDF | 「提取 PDF 内容」 |
+| 处理 Excel | 「分析 Excel 数据」 |
+| 处理 PPT | 「创建演示文稿」 |
+| docx/pdf/xlsx/pptx | 「处理 docx/pdf/xlsx/pptx」 |
+
+### 前端设计类 → `/frontend-design`
+| 触发词 | 示例 |
+|--------|------|
+| 前端设计 | 「设计前端界面」 |
+| 创建组件 | 「创建 React 组件」 |
+| 页面设计 | 「设计登录页面」 |
+| UI 界面 | 「创建 UI 界面」 |
+
+### 后端分析类 → `/backend-checker`
+| 触发词 | 示例 |
+|--------|------|
+| 检查后端 | 「检查后端代码」 |
+| 分析后端 | 「分析后端安全性」 |
+| 后端审查 | 「后端代码审查」 |
+| API 分析 | 「分析 API 接口」 |
+
+### 小红书创作类 → `/auto-redbook-skills`
+| 触发词 | 示例 |
+|--------|------|
+| 小红书笔记 | 「创建小红书笔记」 |
+| 小红书素材 | 「生成小红书素材」 |
+| 笔记创作 | 「创作笔记内容」 |
+| 小红书图文 | 「小红书图文制作」 |
+
+### 内容获取类 → `/multi-platform-content-fetcher`
+| 触发词 | 示例 |
+|--------|------|
+| 获取内容 | 「获取最新内容」 |
+| 抓取文章 | 「抓取公众号文章」 |
+| 内容监控 | 「监控内容更新」 |
+| 多平台内容 | 「获取多平台内容」 |
+
+### 进度界面生成类 → `/visual-interface-generator`
+| 触发词 | 示例 |
+|--------|------|
+| 创建进度界面 | 「为这个Skill创建可视化界面」 |
+| 添加进度条 | 「为xxx添加进度显示」 |
+| 可视化工作流 | 「生成可视化工作流」 |
+| 进度界面 | 「生成进度界面」 |
+
+### 中文优化类 → `/humanizer-zh`
+| 触发词 | 示例 |
+|--------|------|
+| 人性化文本 | 「去除AI痕迹」 |
+| 自然语言 | 「让文本更自然」 |
+| 修改语气 | 「修改文本语气」 |
+| 去AI痕迹 | 「去除AI生成痕迹」 |
+
 ### 开发前指南 → `/pre-dev`
 | 触发词 | 示例 |
 |--------|------|
@@ -147,15 +222,18 @@
 
 | 优先级 | Skill | 说明 |
 |--------|-------|------|
+| 95 | summarize-folder | 目录遍历和文件总结（高优先级，因操作范围大） |
 | 90 | commit | 明确的提交意图，最精确 |
 | 88 | daily-hot-fetcher | 全平台热门信息获取 |
-| 85 | summarize-folder | 目录遍历和文件总结 |
-| 80 | prompt-packs | 提示词库 |
+| 85 | prompt-packs | 提示词库 |
+| 80 | visual-progress | 可视化进度显示 |
 | 75 | github-upload | 明确的上传/推送意图 |
 | 70 | dev-doc | 有明确的文档生成需求 |
 | 60 | pm | 产品规划阶段，想法模糊 |
 | 50 | dev-track | 进度跟踪 |
+| 45 | visual-interface-generator | 进度界面生成 |
 | 40 | bookmark | 收藏管理 |
+| 35 | backend-checker | 后端代码分析 |
 | 30 | pre-dev | 通用开发任务（兜底） |
 
 ### 冲突解决逻辑
@@ -195,15 +273,61 @@
 ### 开发阶段
 - `/pre-dev` - 开发前澄清
 - `/dev-track` - 进度跟踪
+- `/iteration-planner` - 项目迭代规划
 
 ### 版本控制
 - `/commit` - 本地提交
 - `/github-upload` - 远程同步
 
+### 进度与可视化
+- `/visual-progress` - 可视化进度框架
+- `/visual-interface-generator` - 生成进度界面
+
+### 内容处理
+- `/pdf` - PDF 文档处理
+- `/docx` - Word 文档处理
+- `/xlsx` - Excel 表格处理
+- `/pptx` - PowerPoint 演示文稿
+- `/summarize-folder` - 目录遍历和文件总结
+
+### 信息获取
+- `/daily-hot-fetcher` - 全平台热门信息获取
+- `/multi-platform-content-fetcher` - 多平台内容获取
+- `/prompt-packs` - 提示词库
+- `/daily-topic-selector` - 每日选题助手
+
+### 前端开发
+- `/frontend-design` - 前端界面设计
+- `/frontend-test` - 前端测试
+- `/ui-optimizer` - UI 优化
+- `/canvas-design` - 视觉设计
+- `/theme-factory` - 主题工厂
+- `/algorithmic-art` - 算法艺术
+- `/brand-guidelines` - 品牌规范
+- `/web-artifacts-builder` - Web 构件构建
+
+### 后端开发
+- `/backend-checker` - 后端代码分析
+- `/mcp-builder` - MCP 服务器构建
+- `/webapp-testing` - Web 应用测试
+- `/project-optimizer` - 项目优化
+
 ### 工具类
 - `/bookmark` - 收藏管理
-- `/summarize-folder` - 目录遍历和文件总结 (支持 docx/pdf/xlsx/txt/md/pptx)
-- `/daily-hot-fetcher` - 全平台热门信息获取 (国内外热搜)
+- `/skill-creator` - Skill 创建器
+- `/ui-skills` - UI 技能约束
+- `/doc-coauthoring` - 文档协作
+- `/internal-comms` - 内部沟通
+- `/slack-gif-creator` - Slack GIF 创建
+
+### 中文处理
+- `/humanizer-zh` - 中文人性化处理
+- `/auto-redbook-skills` - 小红书笔记创作
+
+### 其他
+- `/docpilot-code-style` - DocPilot 代码风格
+- `/analyze-project-style` - 项目风格分析
+- `/gh-analyze` - GitHub 分析
 
 ---
 

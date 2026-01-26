@@ -75,50 +75,13 @@ git clone https://github.com/77Ezra1/ezra-claude-code-skill.git skills
 
 ## Skills 详细说明
 
-### 1. Commit - Git 提交助手
+本仓库包含 **39 个 Claude Code Skills**，涵盖开发工作流的各个环节。
 
-**命令**: `/commit`
-**优先级**: 90（最高）
+### 核心开发工作流 (7个)
 
-**功能**:
-- 自动分析代码变更
-- 生成符合 Conventional Commit 规范的提交信息
-- 检查敏感文件，防止泄露
-
-**触发词**: 提交代码、commit、存一下、改完了、搞定了
-
-**示例**:
-```
-用户: 改完了，帮我提交
-Claude: 检测到以下更改...建议提交信息: feat(auth): add user login
-```
-
----
-
-### 2. GitHub Upload - 上传到 GitHub
-
-**命令**: `/github-upload`
-**优先级**: 80
-
-**功能**:
-- 自动创建 GitHub 仓库（如不存在）
-- 处理代码推送和冲突
-- 支持选择公开/私有仓库
-
-**触发词**: 上传到 GitHub、推送代码、push、传上去
-
-**示例**:
-```
-用户: 帮我把代码推到 GitHub
-Claude: 检测到无远程仓库，是否创建新仓库？
-```
-
----
-
-### 3. PM - 产品经理助手
+#### 1. PM - 产品经理助手
 
 **命令**: `/pm`
-**优先级**: 60
 
 **功能**:
 - 通过结构化追问完善产品想法
@@ -127,80 +90,24 @@ Claude: 检测到无远程仓库，是否创建新仓库？
 
 **触发词**: 我想做一个、有个想法、帮我规划、想搞个
 
-**示例**:
-```
-用户: 我想做一个个人博客
-Claude: 好的，让我来帮你规划。首先，这个博客的目标用户是谁？
-```
-
 ---
 
-### 4. Dev-Doc - 开发文档生成器
+#### 2. Dev-Doc - 开发文档生成器
 
 **命令**: `/dev-doc`
-**优先级**: 70
 
 **功能**:
 - 将项目规划转化为技术开发文档
 - 生成技术架构、API 设计、数据库设计
 - 输出可执行的任务清单 (TASKS.md)
 
-**前置条件**: 需要先有 PROJECT.md 项目规划文档
-
 **触发词**: 生成开发文档、技术架构、落地方案、任务拆分
 
-**示例**:
-```
-用户: 帮我把规划转成开发文档
-Claude: 我来读取 PROJECT.md，为你生成技术架构和任务清单...
-```
-
 ---
 
-### 5. Dev-Track - 项目进度跟踪
-
-**命令**: `/dev-track`
-**优先级**: 50
-
-**功能**:
-- 基于 TASKS.md 维护项目进度
-- 标记任务完成状态
-- 展示进度百分比和进度条
-
-**触发词**: 更新进度、查看进度、做到哪了、xxx完成了
-
-**示例**:
-```
-用户: 登录功能做完了
-Claude: 已将「2.1 用户登录」标记为完成。总体进度 25%。
-```
-
----
-
-### 6. Bookmark - 收藏夹管理
-
-**命令**: `/bookmark`
-**优先级**: 40
-
-**功能**:
-- 保存和管理链接收藏
-- 支持标签和文件夹分类
-- 搜索收藏内容
-
-**触发词**: 收藏、存个链接、查看收藏、添加书签
-
-**示例**:
-```
-用户: 收藏 https://example.com
-Claude: 已收藏「Example」。需要添加标签吗？
-```
-
----
-
-### 7. Pre-Dev - 开发前指南
+#### 3. Pre-Dev - 开发前指南
 
 **命令**: `/pre-dev`
-**优先级**: 30（兜底）
 
 **功能**:
 - 在编码前澄清需求
@@ -209,11 +116,294 @@ Claude: 已收藏「Example」。需要添加标签吗？
 
 **触发词**: 开始开发、帮我实现、开干、搞起来
 
-**示例**:
-```
-用户: 帮我实现用户登录功能
-Claude: 在开始之前，让我确认几个问题：1. 使用什么认证方式？
-```
+---
+
+#### 4. Dev-Track - 项目进度跟踪
+
+**命令**: `/dev-track`
+
+**功能**:
+- 基于 TASKS.md 维护项目进度
+- 标记任务完成状态
+- 展示进度百分比和进度条
+
+**触发词**: 更新进度、查看进度、做到哪了、xxx完成了
+
+---
+
+#### 5. Commit - Git 提交助手
+
+**命令**: `/commit`
+
+**功能**:
+- 自动分析代码变更
+- 生成符合 Conventional Commit 规范的提交信息
+- 检查敏感文件，防止泄露
+
+**触发词**: 提交代码、commit、存一下、改完了、搞定了
+
+---
+
+#### 6. GitHub Upload - 上传到 GitHub
+
+**命令**: `/github-upload`
+
+**功能**:
+- 自动创建 GitHub 仓库（如不存在）
+- 处理代码推送和冲突
+- 支持选择公开/私有仓库
+
+**触发词**: 上传到 GitHub、推送代码、push、传上去
+
+---
+
+#### 7. Iteration Planner - 项目迭代规划器
+
+**命令**: `/iteration-planner`
+
+**功能**:
+- 分析代码库现状
+- 提出功能迭代建议
+- 生成开发路线图
+
+**触发词**: 迭代规划、功能规划、下一步做什么、版本规划
+
+### 内容处理与文件操作 (10个)
+
+#### 8. PDF - PDF 处理工具
+
+**命令**: `/pdf`
+
+**功能**: PDF 文档的提取、合并、分割、表单填写
+
+#### 9. DOCX - Word 文档处理
+
+**命令**: `/docx`
+
+**功能**: Word 文档的创建、编辑、批注、修订
+
+#### 10. XLSX - Excel 表格处理
+
+**命令**: `/xlsx`
+
+**功能**: Excel 表格的创建、编辑、数据分析
+
+#### 11. PPTX - PowerPoint 演示文稿
+
+**命令**: `/pptx`
+
+**功能**: PPT 演示文稿的创建、编辑、分析
+
+#### 12. Summarize Folder - 目录总结
+
+**命令**: `/summarize-folder`
+
+**功能**: 遍历目录、提取多种格式文件内容、生成结构化总结
+
+**触发词**: 总结这个目录、分析这个文件夹、看看这个目录有什么
+
+#### 13. Bookmark - 收藏夹管理
+
+**命令**: `/bookmark`
+
+**功能**: 保存和管理链接收藏，支持标签分类
+
+**触发词**: 收藏、存个链接、查看收藏
+
+### 信息获取与聚合 (4个)
+
+#### 14. Daily Hot Fetcher - 全平台热门信息
+
+**命令**: `/daily-hot-fetcher`
+
+**功能**:
+- 抓取国内外各平台热门信息（微博、知乎、抖音、B站等）
+- 抓取国外热门（Hacker News、Reddit、Product Hunt）
+- 实时搜索和管理登录状态
+
+**触发词**: 今天有什么热点、看看热搜、热门话题、今天流行什么
+
+#### 15. Multi-Platform Content Fetcher - 多平台内容获取
+
+**命令**: `/multi-platform-content-fetcher`
+
+**功能**: 从微信公众号、小红书、知乎、博客RSS等平台获取内容并存储
+
+#### 16. Prompt Packs - 提示词库
+
+**命令**: `/prompt-packs` 或 `/pp`
+
+**功能**: OpenAI Academy 200+ 企业场景提示词库
+
+**触发词**: 提示词、prompt、提示库
+
+#### 17. Daily Topic Selector - 每日选题助手
+
+**命令**: `/daily-topic-selector`
+
+**功能**: 监控 Import AI、Hacker News 等高质量内容源，推荐选题
+
+### 前端开发与设计 (9个)
+
+#### 18. Frontend Design - 前端设计
+
+**命令**: `/frontend-design`
+
+**功能**: 创建高质量的前端界面和组件
+
+#### 19. Frontend Test - 前端测试套件
+
+**命令**: `/frontend-test`
+
+**功能**: UI 测试、功能测试、性能分析、代码质量审查
+
+#### 20. UI Optimizer - UI 优化器
+
+**命令**: `/ui-optimizer`
+
+**功能**: DocPilot 项目的 UI 优化专家（Notion 风格设计系统）
+
+#### 21. Canvas Design - 视觉设计
+
+**命令**: `/canvas-design`
+
+**功能**: 创建精美的视觉艺术作品（PNG/PDF 格式）
+
+#### 22. Theme Factory - 主题工厂
+
+**命令**: `/theme-factory`
+
+**功能**: 为文档应用预设主题样式
+
+#### 23. Algorithmic Art - 算法艺术
+
+**命令**: `/algorithmic-art`
+
+**功能**: 使用 p5.js 创建算法生成艺术
+
+#### 24. Brand Guidelines - 品牌规范
+
+**命令**: `/brand-guidelines`
+
+**功能**: 应用 Anthropic 官方品牌颜色和排版
+
+#### 25. Web Artifacts Builder - Web 构件构建器
+
+**命令**: `/web-artifacts-builder`
+
+**功能**: 使用 React、Tailwind CSS、shadcn/ui 创建复杂的 HTML 构件
+
+#### 26. Visual Interface Generator - 可视化界面生成器
+
+**命令**: `/visual-interface-generator`
+
+**功能**: 为 Skill 自动生成可视化进度界面
+
+**触发词**: 为这个Skill创建可视化界面、为xxx添加进度显示
+
+### 后端开发与分析 (4个)
+
+#### 27. Backend Checker - 后端代码分析器
+
+**命令**: `/backend-checker`
+
+**功能**: Python/FastAPI/Flask/Django 项目的安全、性能、代码质量分析
+
+#### 28. MCP Builder - MCP 服务器构建器
+
+**命令**: `/mcp-builder`
+
+**功能**: 创建高质量的 Model Context Protocol 服务器
+
+#### 29. Webapp Testing - Web 应用测试
+
+**命令**: `/webapp-testing`
+
+**功能**: 使用 Playwright 进行本地 Web 应用测试
+
+#### 30. Project Optimizer - 项目优化器
+
+**命令**: `/project-optimizer`
+
+**功能**: 分析项目并提供优化建议
+
+### 工具与实用功能 (7个)
+
+#### 31. Visual Progress - 可视化进度框架
+
+**命令**: `/visual-progress`
+
+**功能**:
+- 美观的终端进度条
+- 任务列表显示
+- 批处理进度跟踪
+- 多主题支持（彩色、极简、深色、森林、海洋）
+
+**触发词**: 显示进度、进度条、工作流跟踪、批处理进度
+
+#### 32. Skill Creator - Skill 创建器
+
+**命令**: `/skill-creator`
+
+**功能**: 指导创建新的 Claude Code Skill
+
+#### 33. UI Skills - UI 技能约束
+
+**命令**: `/ui-skills`
+
+**功能**: 构建更好 UI 界面的约束条件
+
+#### 34. Doc Coauthoring - 文档协作
+
+**命令**: `/doc-coauthoring`
+
+**功能**: 结构化文档协作工作流
+
+#### 35. Internal Comms - 内部沟通
+
+**命令**: `/internal-comms`
+
+**功能**: 生成内部沟通文档（状态报告、领导层更新等）
+
+#### 36. Slack Gif Creator - Slack GIF 创建器
+
+**命令**: `/slack-gif-creator`
+
+**功能**: 创建优化的 Slack 动画 GIF
+
+#### 37. Auto Redbook Skills - 小红书笔记创作
+
+**命令**: `/auto-redbook-skills`
+
+**功能**: 小红书笔记素材创作（标题+正文+图片卡片）
+
+### 中文处理与优化 (2个)
+
+#### 38. Humanizer ZH - 中文人性化处理
+
+**命令**: `/humanizer-zh`
+
+**功能**: 去除文本中的 AI 生成痕迹，使文本更自然
+
+#### 39. Docpilot Code Style - DocPilot 代码风格
+
+**命令**: `/docpilot-code-style`
+
+**功能**: DocPilot 项目代码风格检查
+
+### 其他工具
+
+#### GH Analyze - GitHub 分析
+
+**命令**: `/gh-analyze`
+
+**功能**: GitHub 仓库分析
+
+#### Analyze Project Style - 项目风格分析
+
+**命令**: `/analyze-project-style`
+
+**功能**: 分析项目代码风格
 
 ## 典型工作流
 
@@ -232,13 +422,26 @@ Claude: 在开始之前，让我确认几个问题：1. 使用什么认证方式
 
 当你的话可能匹配多个 skill 时，系统会自动选择优先级最高的：
 
-```
-commit (90) > github-upload (80) > dev-doc (70) > pm (60) > dev-track (50) > bookmark (40) > pre-dev (30)
-```
+| 优先级 | Skill | 说明 |
+|--------|-------|------|
+| 95 | summarize-folder | 目录遍历和文件总结 |
+| 90 | commit | 明确的提交意图，最精确 |
+| 88 | daily-hot-fetcher | 全平台热门信息获取 |
+| 85 | prompt-packs | 提示词库 |
+| 80 | visual-progress | 可视化进度显示 |
+| 75 | github-upload | 明确的上传/推送意图 |
+| 70 | dev-doc | 有明确的文档生成需求 |
+| 60 | pm | 产品规划阶段，想法模糊 |
+| 50 | dev-track | 进度跟踪 |
+| 45 | visual-interface-generator | 进度界面生成 |
+| 40 | bookmark | 收藏管理 |
+| 35 | backend-checker | 后端代码分析 |
+| 30 | pre-dev | 通用开发任务（兜底） |
 
 **冲突处理示例**:
 - 「提交代码」→ 触发 `/commit`（不是 `/github-upload`）
 - 「我想做一个登录功能」→ 触发 `/pm`（不是 `/pre-dev`）
+- 「总结这个目录」→ 触发 `/summarize-folder`（高优先级）
 
 ## 文件结构
 
