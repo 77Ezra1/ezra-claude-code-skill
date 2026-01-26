@@ -243,9 +243,66 @@ git clone https://github.com/77Ezra1/ezra-claude-code-skill.git skills
 
 **功能**: 监控 Import AI、Hacker News 等高质量内容源，推荐选题
 
+#### 18. WeChat Article Chat - 微信公众号文章对话
+
+**命令**: `/wechat-article-chat`
+
+**功能**:
+- 获取公众号文章完整内容
+- 与 AI 进行智能问答和深度分析
+- 提供文章总结、观点提炼、延伸思考
+
+**触发词**: 分析公众号文章、公众号对话、解读这篇文章
+
+### 书籍与阅读 (4个)
+
+#### 19. Zlibrary - 电子书搜索与下载
+
+**命令**: `/zlibrary`
+
+**功能**: 搜索、获取详情、下载电子书、收藏管理
+
+**触发词**: 搜索电子书、找书、下载书、zlibrary
+
+#### 20. EPUB to Markdown - EPUB 转换器
+
+**命令**: `/epub-to-markdown`
+
+**功能**: 提取 EPUB 内容并转换为 Markdown 格式，支持章节分割
+
+#### 21. Book Interpreter - 书籍解读 (Ezra 风格)
+
+**命令**: `/book-interpreter`
+
+**功能**: 将书籍转换为对话式中文文章，使用生活化语言、术语解释、生活类比
+
+#### 22. Book Content Workflow - 书籍内容生产工作流
+
+**命令**: `/book-content-workflow`
+
+**功能**: 整合 zlibrary、epub-to-markdown、book-interpreter、volcano-images，实现从搜索书籍到生成解读文章的完整流程
+
+**触发词**: 解读《书名》、完成《书名》的完整解读流程、生成读书笔记
+
+### 媒体处理 (2个)
+
+#### 23. Video Downloader - 视频下载器
+
+**命令**: `/video-downloader`
+
+**功能**: 使用 yt-dlp 和 ffmpeg 下载视频
+
+#### 24. Volcano Images - 火山引擎图片生成
+
+**命令**: `/volcano-images`
+
+**功能**: 使用火山引擎（即梦/Jimeng）API 生成图片，支持 New Yorker 风格插图
+
+**触发词**: 生成图片、配图、即梦、jimeng
+
 ### 前端开发与设计 (9个)
 
-#### 18. Frontend Design - 前端设计
+#### 25. Frontend Design - 前端设计
 
 **命令**: `/frontend-design`
 
@@ -287,13 +344,13 @@ git clone https://github.com/77Ezra1/ezra-claude-code-skill.git skills
 
 **功能**: 应用 Anthropic 官方品牌颜色和排版
 
-#### 25. Web Artifacts Builder - Web 构件构建器
+#### 34. Web Artifacts Builder - Web 构件构建器
 
 **命令**: `/web-artifacts-builder`
 
 **功能**: 使用 React、Tailwind CSS、shadcn/ui 创建复杂的 HTML 构件
 
-#### 26. Visual Interface Generator - 可视化界面生成器
+#### 35. Visual Interface Generator - 可视化界面生成器
 
 **命令**: `/visual-interface-generator`
 
@@ -303,25 +360,25 @@ git clone https://github.com/77Ezra1/ezra-claude-code-skill.git skills
 
 ### 后端开发与分析 (4个)
 
-#### 27. Backend Checker - 后端代码分析器
+#### 36. Backend Checker - 后端代码分析器
 
 **命令**: `/backend-checker`
 
 **功能**: Python/FastAPI/Flask/Django 项目的安全、性能、代码质量分析
 
-#### 28. MCP Builder - MCP 服务器构建器
+#### 37. MCP Builder - MCP 服务器构建器
 
 **命令**: `/mcp-builder`
 
 **功能**: 创建高质量的 Model Context Protocol 服务器
 
-#### 29. Webapp Testing - Web 应用测试
+#### 38. Webapp Testing - Web 应用测试
 
 **命令**: `/webapp-testing`
 
 **功能**: 使用 Playwright 进行本地 Web 应用测试
 
-#### 30. Project Optimizer - 项目优化器
+#### 39. Project Optimizer - 项目优化器
 
 **命令**: `/project-optimizer`
 
@@ -329,7 +386,7 @@ git clone https://github.com/77Ezra1/ezra-claude-code-skill.git skills
 
 ### 工具与实用功能 (7个)
 
-#### 31. Visual Progress - 可视化进度框架
+#### 40. Visual Progress - 可视化进度框架
 
 **命令**: `/visual-progress`
 
@@ -341,37 +398,37 @@ git clone https://github.com/77Ezra1/ezra-claude-code-skill.git skills
 
 **触发词**: 显示进度、进度条、工作流跟踪、批处理进度
 
-#### 32. Skill Creator - Skill 创建器
+#### 41. Skill Creator - Skill 创建器
 
 **命令**: `/skill-creator`
 
 **功能**: 指导创建新的 Claude Code Skill
 
-#### 33. UI Skills - UI 技能约束
+#### 42. UI Skills - UI 技能约束
 
 **命令**: `/ui-skills`
 
 **功能**: 构建更好 UI 界面的约束条件
 
-#### 34. Doc Coauthoring - 文档协作
+#### 43. Doc Coauthoring - 文档协作
 
 **命令**: `/doc-coauthoring`
 
 **功能**: 结构化文档协作工作流
 
-#### 35. Internal Comms - 内部沟通
+#### 44. Internal Comms - 内部沟通
 
 **命令**: `/internal-comms`
 
 **功能**: 生成内部沟通文档（状态报告、领导层更新等）
 
-#### 36. Slack Gif Creator - Slack GIF 创建器
+#### 45. Slack Gif Creator - Slack GIF 创建器
 
 **命令**: `/slack-gif-creator`
 
 **功能**: 创建优化的 Slack 动画 GIF
 
-#### 37. Auto Redbook Skills - 小红书笔记创作
+#### 46. Auto Redbook Skills - 小红书笔记创作
 
 **命令**: `/auto-redbook-skills`
 
@@ -379,13 +436,13 @@ git clone https://github.com/77Ezra1/ezra-claude-code-skill.git skills
 
 ### 中文处理与优化 (2个)
 
-#### 38. Humanizer ZH - 中文人性化处理
+#### 47. Humanizer ZH - 中文人性化处理
 
 **命令**: `/humanizer-zh`
 
 **功能**: 去除文本中的 AI 生成痕迹，使文本更自然
 
-#### 39. Docpilot Code Style - DocPilot 代码风格
+#### 48. Docpilot Code Style - DocPilot 代码风格
 
 **命令**: `/docpilot-code-style`
 
@@ -404,6 +461,10 @@ git clone https://github.com/77Ezra1/ezra-claude-code-skill.git skills
 **命令**: `/analyze-project-style`
 
 **功能**: 分析项目代码风格
+
+---
+
+本仓库现在包含 **46 个 Claude Code Skills**，涵盖开发工作流的各个环节。
 
 ## 典型工作流
 
