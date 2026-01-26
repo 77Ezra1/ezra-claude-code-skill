@@ -1,7 +1,7 @@
 ---
 name: multi-platform-content-fetcher
 description: 多平台内容获取器 - 从多个内容平台（微信公众号、小红书、知乎、微博、博客RSS等）获取内容并存储到本地数据库。支持自然语言触发（如"获取最新内容"、"抓取全亮平台内容"、"检查更新"）和定时任务。使用 web_reader MCP 工具抓取网页内容，自动去重并记录时间戳。适用于内容监控、知识库构建、信息聚合等场景。
-user-invocable: false
+user-invocable: true
 ---
 
 

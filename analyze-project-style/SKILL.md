@@ -1,7 +1,7 @@
 ---
 name: analyze-project-style
 description: Auto-analyze and enforce project code style. First call: scans project to generate .claude/CODE_STYLE.md. Subsequent calls: reads cached style guide. Use when user requests code/style modifications, formatting, or refactoring. Keywords: "调整样式", "修改样式", "adjust style", "format code", "optimize code", "代码规范", "代码风格".
-user-invocable: false
+user-invocable: true
 ---
 
 

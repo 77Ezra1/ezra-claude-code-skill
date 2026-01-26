@@ -1,7 +1,7 @@
 ---
 name: backend-checker
 description: Comprehensive backend code analyzer for Python/FastAPI/Flask/Django projects. Performs security, performance, and code quality analysis with actionable recommendations. Use when users ask to analyze, audit, review, or check backend code via natural language (e.g., "检查后端代码", "分析一下后端", "backend code review", "analyze backend security", "check for performance issues"). Generates detailed reports with health scores, prioritized issues, and sprint plans.
-user-invocable: false
+user-invocable: true
 ---
 
 

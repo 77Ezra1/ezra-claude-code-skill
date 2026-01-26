@@ -1,7 +1,7 @@
 ---
 name: docpilot-code-style
 description: DocPilot project code style enforcement. Use this skill when modifying, adjusting, or formatting code/styles in the DocPilot project. Automatically enforces frontend (React/TypeScript/SCSS) and backend (Python/FastAPI) coding standards. Triggered by: "调整样式", "修改样式", "adjust style", "change style", "format code", or any styling/formatting request.
-user-invocable: false
+user-invocable: true
 ---
 
 

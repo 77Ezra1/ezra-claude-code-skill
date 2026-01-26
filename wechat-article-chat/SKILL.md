@@ -1,7 +1,7 @@
 ---
 name: wechat-article-chat
 description: 微信公众号文章AI对话助手 - 获取公众号文章内容并与AI进行智能问答和深度分析。当用户提供微信公众号文章链接（mp.weixin.qq.com）时触发此技能，用于：1) 抓取文章完整内容，2) 保存文章到本地（原文+分析），3) 基于文章内容进行智能问答，4) 提供文章深度分析（总结、观点提炼、延伸思考）。
-user-invocable: false
+user-invocable: true
 ---
 
 

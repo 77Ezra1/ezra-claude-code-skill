@@ -1,7 +1,7 @@
 ---
 name: visual-interface-generator
 description: 为 Skill 自动生成可视化进度界面。自然语言触发：'为这个Skill创建可视化界面' '为xxx添加进度显示' '生成可视化工作流' '为Skill添加进度条'。自动分析目标Skill的工作流程，生成专属的可视化界面代码并集成visual-progress框架。
-user-invocable: false
+user-invocable: true
 ---
 
 

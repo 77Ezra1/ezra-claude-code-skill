@@ -1,7 +1,7 @@
 ---
 name: volcano-images
 description: Volcano Engine (Jimeng/即梦) API image generation - Generate images using Chinese AI image generation service. Use when user mentions "配图", "生成图片", "illustration", "jimeng", "即梦", or needs images for articles. Supports New Yorker style illustrations, batch generation, and custom captions.
-user-invocable: false
+user-invocable: true
 ---
 
 

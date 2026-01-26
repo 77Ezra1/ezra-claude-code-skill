@@ -1,7 +1,7 @@
 ---
 name: iteration-planner
 description: Project code analyzer and feature iteration advisor. Use when user asks to analyze project code, propose feature iterations, identify missing functionality, or create development roadmap based on existing codebase. Performs comprehensive codebase traversal, analyzes current implementation status, and provides structured iteration suggestions with prioritized recommendations.
-user-invocable: false
+user-invocable: true
 ---
 
 

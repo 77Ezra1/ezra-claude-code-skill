@@ -1,7 +1,7 @@
 ---
 name: epub-to-markdown
 description: EPUB to Markdown converter - Extract content from EPUB files and convert to Markdown format. Use when user mentions "epub", "convert epub", "epub to markdown", or after downloading books from zlibrary. Supports batch conversion, chapter splitting, and metadata preservation.
-user-invocable: false
+user-invocable: true
 ---
 
 

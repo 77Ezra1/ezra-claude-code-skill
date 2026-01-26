@@ -1,7 +1,7 @@
 ---
 name: gh-analyze
 description: Comprehensive GitHub repository analyzer that provides deep analysis of any GitHub repository. Use when users ask to analyze, examine, investigate, or understand a GitHub repository via natural language (e.g., "帮我分析这个GitHub仓库", "分析一下github.com/user/repo", "看看这个项目怎么样", "了解这个仓库的代码质量"). The skill performs multi-dimensional analysis including: (1) README and project documentation, (2) Code structure and architecture, (3) Dependencies and tech stack, (4) Commit history and activity, (5) Code quality assessment, (6) Security review, (7) Performance analysis, (8) Test coverage analysis.
-user-invocable: false
+user-invocable: true
 ---
 
 

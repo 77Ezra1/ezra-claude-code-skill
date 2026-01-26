@@ -1,7 +1,7 @@
 ---
 name: humanizer-zh
 description: |
-user-invocable: false
+user-invocable: true
 ---
 
 
