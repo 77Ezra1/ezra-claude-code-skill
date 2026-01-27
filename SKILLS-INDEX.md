@@ -145,7 +145,7 @@
 | flow field | 「创建 flow field」 |
 | 粒子系统 | 「粒子系统艺术」 |
 
-### 文档处理类 → `/docx` `/pdf` `/xlsx` `/pptx`
+### 文档处理类 → `/docx` `/pdf` `/xlsx` `/pptx` `/feishu-doc`
 | 触发词 | 示例 |
 |--------|------|
 | 处理 Word | 「编辑 Word 文档」 |
@@ -153,6 +153,9 @@
 | 处理 Excel | 「分析 Excel 数据」 |
 | 处理 PPT | 「创建演示文稿」 |
 | docx/pdf/xlsx/pptx | 「处理 docx/pdf/xlsx/pptx」 |
+| 飞书文档 | 「分析飞书文档」 |
+| feishu | 「获取飞书文档内容」 |
+| 飞书 | 「飞书文档转markdown」 |
 
 ### 前端设计类 → `/frontend-design`
 | 触发词 | 示例 |
@@ -288,6 +291,7 @@
 - `/docx` - Word 文档处理
 - `/xlsx` - Excel 表格处理
 - `/pptx` - PowerPoint 演示文稿
+- `/feishu-doc` - 飞书文档分析（提取、转换、图片识别）
 - `/summarize-folder` - 目录遍历和文件总结
 
 ### 信息获取
